@@ -14,7 +14,8 @@ from anndata_dissector.utils.utils import (
 
 from anndata_dissector.utils.sparse_utils import(
     merge_csr,
-    load_disjoint_csr)
+    load_disjoint_csr,
+    merge_index_list)
 
 
 @pytest.fixture
@@ -162,3 +163,14 @@ def test_load_disjoint_csr(
     assert actual.shape == expected.shape
     assert actual.dtype == expected.dtype
     np.testing.assert_allclose(actual, expected)
+
+
+@pytest.mark.parametrize(
+    "input_list, expected",
+    (([1,2,3,8,7], [(1,4), (7,9)]),
+     ([3,7,2,1,8], [(1,4), (7,9)]),
+     ([0,5,9,6,10,11,17], [(0,1), (5,7), (9,12), (17,18)]),
+    ))
+def test_merge_index_list(input_list, expected):
+    actual = merge_index_list(input_list)
+    assert actual == expected
