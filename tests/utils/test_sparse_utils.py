@@ -139,7 +139,6 @@ def test_load_disjoint_csr(
     ann.write_h5ad(tmp_path)
 
     index_list = np.unique(rng.integers(0, nrows, 45))
-
     rng.shuffle(index_list)
     assert len(index_list) > 2
     expected = np.zeros((len(index_list), ncols), dtype=int)
