@@ -1,3 +1,4 @@
+pytest
 h5py
 anndata
 numpy
