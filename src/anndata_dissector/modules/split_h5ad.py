@@ -1,9 +1,13 @@
 import anndata
 import copy
+import h5py
 import json
 import pandas as pd
 import pathlib
 import scipy.sparse as scipy_sparse
+
+from anndata_dissector.utils.pandas_utils import (
+    read_df_from_h5ad)
 
 from anndata_dissector.utils.sparse_utils import (
     load_disjoint_csr)
@@ -52,12 +56,22 @@ def extract_h5ad(
         raise RuntimeError(
             f"{parent_path} is not a file")
 
-    output_path = pathlib.path(output_path)
+    output_path = pathlib.Path(output_path)
     if not clobber:
         if output_path.exists():
             raise RuntimeError(
                 f"{output_path} exists; "
                 "run with clobber=True to overwrite")
+
+    original_var = read_df_from_h5ad(
+        h5ad_path=parent_path,
+        df_name='var')
+
+    if len(original_var) != len(gene_config):
+        raise RuntimeError(
+            f"parent has {len(original_var)} genes\n"
+            f"you specified {len(gene_config)}\n"
+            "these must be equal")
 
     row_list = [cell['row_idx'] for cell in cell_config]
 
@@ -85,7 +99,7 @@ def extract_h5ad(
                          indptr=src[f'{data_key}/indptr'])
 
     x_matrix = scipy_sparse.csr_matrix(
-            (data, indices, indtpr),
+            (data, indices, indptr),
             shape=(len(cell_config), len(gene_config)))
 
     obs_data = []
@@ -93,7 +107,7 @@ def extract_h5ad(
         new_cell = copy.deepcopy(cell)
         new_cell.pop('row_idx')
         obs_data.append(new_cell)
-    obs_df = pd.DataFrame(obs_df)
+    obs_df = pd.DataFrame(obs_data)
     obs_df = obs_df.set_index(obs_index_column)
 
     var_df = pd.DataFrame(gene_config)
