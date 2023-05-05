@@ -9,7 +9,6 @@ with open("raw/extracted_wb10x_gene_identifiers.csv", "r") as in_file:
     for line in in_file:
         params = line.strip().split(',')
         this = {
-            'row_idx': int(params[header_to_idx['']]),
             'gene_identifier': params[header_to_idx['gene_identifer']],
             'gene_symbol': params[header_to_idx['gene_symbol']]}
         config.append(this)
