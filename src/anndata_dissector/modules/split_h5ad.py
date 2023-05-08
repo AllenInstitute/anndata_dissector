@@ -85,7 +85,8 @@ def extract_h5ad(
     else:
         metadata = copy.deepcopy(metadata)
 
-    metadata['parent'] = str(parent_path.resolve().absolute())
+    if 'parent' not in metadata:
+        metadata['parent'] = str(parent_path.resolve().absolute())
     metadata['parent_layer'] = data_key
     metadata['rows'] = copy.deepcopy(row_list)
 
