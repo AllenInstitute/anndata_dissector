@@ -19,7 +19,14 @@ def split_h5ad_batch(
         var_index_column='gene_identifier',
         output_dir=None,
         tmp_dir=None,
-        clobber=False):
+        clobber=False,
+        layer_config=None):
+    """
+    layer_config is a list of dicts like
+        {'layer': name of layer
+         'norm': name of normalization
+         'tag': tag appended to file name}
+    """
 
     output_dir = pathlib.Path(output_dir)
     if not output_dir.is_dir():
@@ -45,18 +52,25 @@ def split_h5ad_batch(
         parent_path = new_path
         print("done copying")
 
-    norm_lookup = {
-        "rawcount": "raw",
-        "X": "log2(CPM+1)"}
-    tag_lookup = {
-        "rawcount": "raw",
-        "X": "log2"}
+    if layer_config is None:
+        norm_lookup = {
+            "rawcount": "raw",
+            "X": "log2(CPM+1)"}
+        tag_lookup = {
+            "rawcount": "raw",
+            "X": "log2"}
+    else:
+        norm_lookup = dict()
+        tag_lookup = dict()
+        for layer in layer_config:
+            norm_lookup[layer['layer']] = layer['norm']
+            tag_lookup[layer['layer']] = layer['tag']
 
     for config_key in cell_config_lookup:
         if len(config_key) == 0:
             continue
         cell_config = cell_config_lookup[config_key]
-        for layer in ("X", "rawcount"):
+        for layer in norm_lookup:
             out_path = output_dir / f"{config_key}-{tag_lookup[layer]}.h5ad"
             metadata = {
                 "parent": original_parent,
@@ -110,6 +124,10 @@ if __name__ == "__main__":
         '--clobber',
         default=False,
         action='store_true')
+    parser.add_argumetn(
+        '--is_merfish',
+        default=False,
+        action='store_true')
 
     args = parser.parse_args()
 
@@ -118,10 +136,18 @@ if __name__ == "__main__":
     gene_config = json.load(
         open(args.gene_config_path, 'rb'))
 
+    layer_config = None
+    if args.is_merfish:
+        layer_config = [
+            {'layer': 'X', 'norm': 'log2p', 'tag': 'log2'},
+            {'layer': 'raw', 'norm': 'raw', 'tag': 'raw'}
+        ]
+
     split_h5ad_batch(
         parent_path=args.parent_path,
         cell_config_lookup=cell_config_lookup,
         gene_config=gene_config,
         output_dir=args.output_dir,
         tmp_dir=args.tmp_dir,
-        clobber=args.clobber)
+        clobber=args.clobber,
+        layer_config=layer_config)
