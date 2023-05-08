@@ -124,7 +124,7 @@ if __name__ == "__main__":
         '--clobber',
         default=False,
         action='store_true')
-    parser.add_argumetn(
+    parser.add_argument(
         '--is_merfish',
         default=False,
         action='store_true')

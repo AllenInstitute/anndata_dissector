@@ -63,6 +63,9 @@ def extract_h5ad(
                 f"{output_path} exists; "
                 "run with clobber=True to overwrite")
 
+    print(f"preparing to write {output_path}")
+    print(f"{len(cell_config)} rows")
+
     original_var = read_df_from_h5ad(
         h5ad_path=parent_path,
         df_name='var')
