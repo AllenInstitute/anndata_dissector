@@ -74,3 +74,52 @@ def split_h5ad_batch(
 
     if tmp_dir is not None:
         _clean_up(tmp_dir)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        '--parent_path',
+        type=str,
+        default=None,
+        help='Path to the large h5ad file being split')
+    parser.add_argument(
+        '--cell_config_path',
+        type=str,
+        default=None,
+        help='Path to the JSONized config showing how to split rows of '
+        'h5ad file')
+    parser.add_argument(
+        '--gene_config_path',
+        type=str,
+        default=None,
+        help='Path to JSONized config for gene data')
+    parser.add_argument(
+        '--output_path',
+        type=str,
+        default=None,
+        help='Path to directory where output files will be written')
+    parser.add_argument(
+        '--tmp_dir',
+        type=str,
+        default=None,
+        help='Path to fast tmp_dir where parent file will be copied')
+    parser.add_argument(
+        '--clobber',
+        default=False,
+        action='store_true')
+
+    args = parser.parse_args()
+
+    cell_config_lookup = json.load(
+        open(args.cell_config_path, 'rb'))
+    gene_config = json.load(
+        open(args.gene_config_path, 'rb'))
+
+    split_h5ad_batch(
+        parent_path=args.parent_path,
+        cell_config_lookup=cell_config_lookup,
+        gene_config=gene_config,
+        output_dir=args.output_dir,
+        tmp_dir=args.tmp_dir,
+        clobber=args.clobber)
