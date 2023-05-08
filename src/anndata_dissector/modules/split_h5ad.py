@@ -1,7 +1,6 @@
 import anndata
 import copy
 import h5py
-import json
 import pandas as pd
 import pathlib
 import scipy.sparse as scipy_sparse

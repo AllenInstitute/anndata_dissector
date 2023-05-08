@@ -1,4 +1,3 @@
-import h5py
 import numpy as np
 
 
@@ -21,7 +20,6 @@ def load_disjoint_csr(
     data_list = []
     indices_list = []
     indptr_list = []
-    t_load = 0.0
     for row_chunk in row_chunk_list:
         (this_data,
          this_indices,

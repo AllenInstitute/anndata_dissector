@@ -5,8 +5,7 @@ import shutil
 import tempfile
 
 from anndata_dissector.utils.utils import (
-    _clean_up,
-    mkstemp_clean)
+    _clean_up)
 
 from anndata_dissector.modules.split_h5ad import (
     extract_h5ad)
