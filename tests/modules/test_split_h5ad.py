@@ -3,7 +3,6 @@ import pytest
 import anndata
 import pandas as pd
 import numpy as np
-import scipy.sparse as scipy_sparse
 
 from anndata_dissector.utils.utils import (
     mkstemp_clean)
