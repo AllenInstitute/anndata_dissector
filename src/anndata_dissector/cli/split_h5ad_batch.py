@@ -95,7 +95,7 @@ if __name__ == "__main__":
         default=None,
         help='Path to JSONized config for gene data')
     parser.add_argument(
-        '--output_path',
+        '--output_dir',
         type=str,
         default=None,
         help='Path to directory where output files will be written')
