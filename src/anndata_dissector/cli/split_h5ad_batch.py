@@ -53,6 +53,8 @@ def split_h5ad_batch(
         "X": "log2"}
 
     for config_key in cell_config_lookup:
+        if len(config_key) == 0:
+            continue
         cell_config = cell_config_lookup[config_key]
         for layer in ("X", "rawcount"):
             out_path = output_dir / f"{config_key}-{tag_lookup[layer]}.h5ad"
