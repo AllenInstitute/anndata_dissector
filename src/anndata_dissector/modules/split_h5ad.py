@@ -88,7 +88,7 @@ def extract_h5ad(
     if 'parent' not in metadata:
         metadata['parent'] = str(parent_path.resolve().absolute())
     metadata['parent_layer'] = data_key
-    metadata['rows'] = copy.deepcopy(row_list)
+    metadata['parent_rows'] = copy.deepcopy(row_list)
 
     with h5py.File(parent_path, 'r', swmr=True) as src:
         (data,

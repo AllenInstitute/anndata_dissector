@@ -137,7 +137,9 @@ def test_extract_h5ad(
     else:
         expected_layer = f'layers/{layer}'
     assert uns_actual['parent_layer'] == expected_layer
-    np.testing.assert_array_equal(uns_actual['rows'], chosen_rows)
+    np.testing.assert_array_equal(
+        uns_actual['parent_rows'],
+        chosen_rows)
 
     obs_data = []
     for cell in cell_config:
