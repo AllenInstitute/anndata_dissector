@@ -22,7 +22,8 @@ def extract_h5ad(
         obs_index_column,
         var_index_column,
         metadata=None,
-        clobber=False):
+        clobber=False,
+        tmp_dir=None):
     """
     Write out a subset of rows from a parent h5ad file
     to a smaller h5ad file.
@@ -100,7 +101,8 @@ def extract_h5ad(
                          row_index_list=row_list,
                          data=src[f'{data_key}/data'],
                          indices=src[f'{data_key}/indices'],
-                         indptr=src[f'{data_key}/indptr'])
+                         indptr=src[f'{data_key}/indptr'],
+                         tmp_dir=tmp_dir)
 
     x_matrix = scipy_sparse.csr_matrix(
             (data, indices, indptr),

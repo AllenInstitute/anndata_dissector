@@ -84,7 +84,8 @@ def split_h5ad_batch(
                 obs_index_column=obs_index_column,
                 var_index_column=var_index_column,
                 metadata=metadata,
-                clobber=clobber)
+                clobber=clobber,
+                tmp_dir=tmp_dir)
             print(f"wrote {out_path}")
     print("done writing files")
 
