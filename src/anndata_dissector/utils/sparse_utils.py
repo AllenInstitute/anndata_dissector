@@ -50,6 +50,7 @@ def load_disjoint_csr(
         final_indptr = np.zeros(
             merged_indptr.shape,
             dtype=merged_indptr.dtype)
+        print('allocated final arrays')
 
         data_ct = 0
         for ii in range(len(row_index_list)):
@@ -63,6 +64,7 @@ def load_disjoint_csr(
             data_ct += n
         final_indptr[-1] = len(final_data)
 
+    print(f'cleaning up {tmp_dir}')
     _clean_up(tmp_dir)
 
     return final_data, final_indices, final_indptr
@@ -96,6 +98,8 @@ def _load_csr_naive(
         data_list.append(this_data)
         indices_list.append(this_indices)
         indptr_list.append(this_indptr)
+
+    print('loaded chunks')
 
     merge_csr(
         data_list=data_list,
@@ -234,6 +238,7 @@ def merge_csr(
             i0 = idx1
             ptr0 = ptr1
         indptr[-1] = n_data
+    print(f'merged csr to {tmp_path}')
 
 
 def _merge_csr_chunk(
