@@ -26,7 +26,7 @@ def tmp_dir_fixture(tmp_path_factory):
     _clean_up(tmp_path)
 
 
-def test_merge_csr():
+def test_merge_csr(tmp_dir_fixture):
 
     nrows = 100
     ncols = 234
@@ -50,7 +50,8 @@ def test_merge_csr():
      merged_indptr) = merge_csr(
          data_list=[sub0.data, sub1.data, sub2.data],
          indices_list=[sub0.indices, sub1.indices, sub2.indices],
-         indptr_list=[sub0.indptr, sub1.indptr, sub2.indptr])
+         indptr_list=[sub0.indptr, sub1.indptr, sub2.indptr],
+         tmp_dir=tmp_dir_fixture)
 
 
     np.testing.assert_allclose(merged_data, final_csr.data)
@@ -67,7 +68,7 @@ def test_merge_csr():
 
 
 @pytest.mark.parametrize("zero_block", (0, 1, 2))
-def test_merge_csr_block_zeros(zero_block):
+def test_merge_csr_block_zeros(zero_block, tmp_dir_fixture):
 
     nrows = 100
     ncols = 234
@@ -98,7 +99,8 @@ def test_merge_csr_block_zeros(zero_block):
      merged_indptr) = merge_csr(
          data_list=[sub0.data, sub1.data, sub2.data],
          indices_list=[sub0.indices, sub1.indices, sub2.indices],
-         indptr_list=[sub0.indptr, sub1.indptr, sub2.indptr])
+         indptr_list=[sub0.indptr, sub1.indptr, sub2.indptr],
+         tmp_dir=tmp_dir_fixture)
 
 
     np.testing.assert_allclose(merged_data, final_csr.data)

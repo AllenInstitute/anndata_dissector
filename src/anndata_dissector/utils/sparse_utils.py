@@ -1,16 +1,70 @@
+import h5py
 import numpy as np
+import pathlib
+import tempfile
+
+from anndata_dissector.utils.utils import (
+    _clean_up,
+    mkstemp_clean)
 
 
 def load_disjoint_csr(
         row_index_list,
         data,
         indices,
-        indptr):
+        indptr,
+        tmp_dir=None):
     """
     Load a csr matrix from a not necessarily contiguous
     set of row indexes.
     """
+    tmp_dir = pathlib.Path(
+        tempfile.mkdtemp(dir=tmp_dir,
+                         prefix='csr_'))
+
+
     row_index_list = np.array(row_index_list)
+
+    (row_index_list,
+     inverse_argsort,
+     merged_data,
+     merged_indices,
+     merged_indptr) = _load_csr_naive(
+                             row_index_list=row_index_list,
+                             data=data,
+                             indices=indices,
+                             indptr=indptr,
+                             tmp_dir=tmp_dir)
+
+    # undo sorting
+    final_data = np.zeros(merged_data.shape, dtype=merged_data.dtype)
+    final_indices = np.zeros(merged_indices.shape, dtype=merged_indices.dtype)
+    final_indptr = np.zeros(merged_indptr.shape, dtype=merged_indptr.dtype)
+
+    data_ct = 0
+    for ii in range(len(row_index_list)):
+        new_position = inverse_argsort[ii]
+        indptr0 = merged_indptr[new_position]
+        indptr1 = merged_indptr[new_position+1]
+        n = indptr1-indptr0
+        final_data[data_ct:data_ct+n] = merged_data[indptr0:indptr1]
+        final_indices[data_ct:data_ct+n] = merged_indices[indptr0:indptr1]
+        final_indptr[ii] = data_ct
+        data_ct += n
+    final_indptr[-1] = len(final_data)
+
+    _clean_up(tmp_dir)
+
+    return final_data, final_indices, final_indptr
+
+
+def _load_csr_naive(
+        row_index_list,
+        data,
+        indices,
+        indptr,
+        tmp_dir):
+
     sorted_dex = np.argsort(row_index_list)
     inverse_argsort = {sorted_dex[ii]: ii for ii in range(len(sorted_dex))}
 
@@ -38,26 +92,14 @@ def load_disjoint_csr(
      merged_indptr) = merge_csr(
                          data_list=data_list,
                          indices_list=indices_list,
-                         indptr_list=indptr_list)
+                         indptr_list=indptr_list,
+                         tmp_dir=tmp_dir)
 
-    # undo sorting
-    final_data = np.zeros(merged_data.shape, dtype=merged_data.dtype)
-    final_indices = np.zeros(merged_indices.shape, dtype=merged_indices.dtype)
-    final_indptr = np.zeros(merged_indptr.shape, dtype=merged_indptr.dtype)
-
-    data_ct = 0
-    for ii in range(len(row_index_list)):
-        new_position = inverse_argsort[ii]
-        indptr0 = merged_indptr[new_position]
-        indptr1 = merged_indptr[new_position+1]
-        n = indptr1-indptr0
-        final_data[data_ct:data_ct+n] = merged_data[indptr0:indptr1]
-        final_indices[data_ct:data_ct+n] = merged_indices[indptr0:indptr1]
-        final_indptr[ii] = data_ct
-        data_ct += n
-    final_indptr[-1] = len(final_data)
-
-    return final_data, final_indices, final_indptr
+    return (row_index_list,
+            inverse_argsort,
+            merged_data,
+            merged_indices,
+            merged_indptr)
 
 
 def _load_csr(
@@ -98,7 +140,8 @@ def _load_csr(
 def merge_csr(
         data_list,
         indices_list,
-        indptr_list):
+        indptr_list,
+        tmp_dir):
     """
     Merge multiple CSR matrices into one
 
@@ -126,6 +169,11 @@ def merge_csr(
 
     indptr:
         merged 'indptr' array for the final CSR matrix
+
+    Note
+    -----
+    will pop elements from data_list, indices_list, and indptr_list
+    so that those arguments get modified in place.
     """
     n_data = 0
     for d in data_list:
@@ -135,34 +183,56 @@ def merge_csr(
         n_indptr += len(i)-1
     n_indptr += 1
 
-    data = np.zeros(n_data, dtype=data_list[0].dtype)
-    indices = np.zeros(n_data, dtype=int)
-    indptr = np.zeros(n_indptr, dtype=int)
+    tmp_path = mkstemp_clean(dir=tmp_dir, suffix='.h5')
+    chunks = (min(n_data, 10000), )
+    with h5py.File(tmp_path, 'a') as out_file:
+        data = out_file.create_dataset(
+            'data',
+            shape=(n_data,),
+            dtype=data_list[0].dtype,
+            chunks=chunks)
+        indices = out_file.create_dataset(
+            'indices',
+            shape=(n_data,),
+            dtype=int,
+            chunks=chunks)
+        indptr = out_file.create_dataset(
+            'indptr',
+            shape=(n_indptr,),
+            dtype=int,
+            chunks=(min(n_indptr, 1000),))
 
-    i0 = 0
-    ptr0 = 0
-    for this_data, this_indices, this_indptr in zip(data_list,
-                                                    indices_list,
-                                                    indptr_list):
+        i0 = 0
+        ptr0 = 0
+        for ii in range(len(data_list)):
+            this_data = data_list[ii]
+            this_indices = indices_list[ii]
+            this_indptr = indptr_list[ii]
 
-        (data,
-         indices,
-         indptr,
-         idx1,
-         ptr1) = _merge_csr_chunk(
-                 data_in=this_data,
-                 indices_in=this_indices,
-                 indptr_in=this_indptr,
-                 data=data,
-                 indices=indices,
-                 indptr=indptr,
-                 idx0=i0,
-                 ptr0=ptr0)
+            data_list[ii] = None
+            indices_list[ii] = None
+            indptr_list[ii] = None
 
-        i0 = idx1
-        ptr0 = ptr1
+            (idx1,
+             ptr1) = _merge_csr_chunk(
+                     data_in=this_data,
+                     indices_in=this_indices,
+                     indptr_in=this_indptr,
+                     data=data,
+                     indices=indices,
+                     indptr=indptr,
+                     idx0=i0,
+                     ptr0=ptr0)
 
-    indptr[-1] = len(data)
+            i0 = idx1
+            ptr0 = ptr1
+
+        indptr[-1] = n_data
+        data = data[()]
+        indices = indices[()]
+        indptr = indptr[()]
+
+    assert data.shape == (n_data, )
     return data, indices, indptr
 
 
@@ -181,7 +251,7 @@ def _merge_csr_chunk(
     ptr1 = ptr0 + len(indptr_in)-1
     indptr[ptr0:ptr1] = indptr_in[:-1] + idx0
 
-    return data, indices, indptr, idx1, ptr1
+    return idx1, ptr1
 
 
 def merge_index_list(
