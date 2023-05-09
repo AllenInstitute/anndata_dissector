@@ -45,14 +45,18 @@ def test_merge_csr(tmp_dir_fixture):
     sub1 = scipy_sparse.csr_matrix(data[32:71, :])
     sub2 = scipy_sparse.csr_matrix(data[71:, :])
 
-    (merged_data,
-     merged_indices,
-     merged_indptr) = merge_csr(
+    tmp_path = mkstemp_clean(dir=tmp_dir_fixture, suffix='.h5')
+
+    merge_csr(
          data_list=[sub0.data, sub1.data, sub2.data],
          indices_list=[sub0.indices, sub1.indices, sub2.indices],
          indptr_list=[sub0.indptr, sub1.indptr, sub2.indptr],
-         tmp_dir=tmp_dir_fixture)
+         tmp_path=tmp_path)
 
+    with h5py.File(tmp_path, 'r') as src:
+        merged_data = src['data'][()]
+        merged_indices = src['indices'][()]
+        merged_indptr = src['indptr'][()]
 
     np.testing.assert_allclose(merged_data, final_csr.data)
     np.testing.assert_array_equal(merged_indices, final_csr.indices)
@@ -94,14 +98,18 @@ def test_merge_csr_block_zeros(zero_block, tmp_dir_fixture):
     sub1 = scipy_sparse.csr_matrix(data[32:71, :])
     sub2 = scipy_sparse.csr_matrix(data[71:, :])
 
-    (merged_data,
-     merged_indices,
-     merged_indptr) = merge_csr(
+    tmp_path = mkstemp_clean(dir=tmp_dir_fixture, suffix='.h5')
+
+    merge_csr(
          data_list=[sub0.data, sub1.data, sub2.data],
          indices_list=[sub0.indices, sub1.indices, sub2.indices],
          indptr_list=[sub0.indptr, sub1.indptr, sub2.indptr],
-         tmp_dir=tmp_dir_fixture)
+         tmp_path=tmp_path)
 
+    with h5py.File(tmp_path, 'r') as src:
+        merged_data = src['data'][()]
+        merged_indices = src['indices'][()]
+        merged_indptr = src['indptr'][()]
 
     np.testing.assert_allclose(merged_data, final_csr.data)
     np.testing.assert_array_equal(merged_indices, final_csr.indices)
