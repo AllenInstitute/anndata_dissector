@@ -1,4 +1,5 @@
 import argparse
+import gc
 import json
 import pathlib
 import shutil
@@ -86,6 +87,7 @@ def split_h5ad_batch(
                 metadata=metadata,
                 clobber=clobber,
                 tmp_dir=tmp_dir)
+            gc.collect()
             print(f"wrote {out_path}")
     print("done writing files")
 

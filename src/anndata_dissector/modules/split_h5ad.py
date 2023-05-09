@@ -1,5 +1,6 @@
 import anndata
 import copy
+import gc
 import h5py
 import pandas as pd
 import pathlib
@@ -126,3 +127,4 @@ def extract_h5ad(
         uns=metadata)
 
     a_data.write_h5ad(output_path)
+    gc.collect()
