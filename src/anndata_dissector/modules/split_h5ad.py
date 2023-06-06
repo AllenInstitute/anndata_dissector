@@ -172,6 +172,10 @@ def subdivide_h5ad(
     """
 
     output_dir = pathlib.Path(output_dir)
+
+    if not output_dir.exists():
+        output_dir.mkdir()
+
     if not output_dir.is_dir():
         raise RuntimeError(
             f"{output_dir} is not dir")
