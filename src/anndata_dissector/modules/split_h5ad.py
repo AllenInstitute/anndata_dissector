@@ -98,7 +98,7 @@ def extract_h5ad(
     with h5py.File(parent_path, 'r', swmr=True) as src:
         attr_dict = dict(src[f'{data_key}'].attrs)
         is_csr = True
-        if 'ecnoding-type' not in attr_dict:
+        if 'encoding-type' not in attr_dict:
             is_csr = False
         elif 'csr' not in attr_dict['encoding-type']:
             is_csr = False
