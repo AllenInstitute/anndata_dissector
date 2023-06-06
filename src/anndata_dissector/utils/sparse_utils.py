@@ -89,7 +89,7 @@ def _load_csr_naive(
     for row_chunk in row_chunk_list:
         (this_data,
          this_indices,
-         this_indptr) = _load_csr(
+         this_indptr) = load_csr(
                              row_spec=row_chunk,
                              data=data,
                              indices=indices,
@@ -111,7 +111,7 @@ def _load_csr_naive(
             inverse_argsort)
 
 
-def _load_csr(
+def load_csr(
         row_spec,
         data,
         indices,

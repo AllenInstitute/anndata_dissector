@@ -15,6 +15,7 @@ from anndata_dissector.utils.utils import (
 from anndata_dissector.utils.sparse_utils import(
     merge_csr,
     load_disjoint_csr,
+    load_csr,
     merge_index_list)
 
 
@@ -183,3 +184,44 @@ def test_load_disjoint_csr(
 def test_merge_index_list(input_list, expected):
     actual = merge_index_list(input_list)
     assert actual == expected
+
+
+def test_load_csr(tmp_dir_fixture):
+    tmp_path = pathlib.Path(
+        mkstemp_clean(dir=tmp_dir_fixture, suffix='.h5ad'))
+
+    rng = np.random.default_rng(88123)
+
+    data = np.zeros(60000, dtype=int)
+    chosen_dex = rng.choice(np.arange(len(data)),
+                            len(data)//4,
+                            replace=False)
+
+    data[chosen_dex] = rng.integers(2, 1000, len(chosen_dex))
+    data = data.reshape((200, 300))
+
+    csr = scipy_sparse.csr_matrix(data)
+    ann = anndata.AnnData(X=csr, dtype=int)
+    ann.write_h5ad(tmp_path)
+
+    row_spec = (119, 187)
+    expected = csr[row_spec[0]:row_spec[1], :]
+
+    with h5py.File(tmp_path, 'r') as src:
+        actual = load_csr(
+            row_spec=row_spec,
+            data=src['X/data'],
+            indices=src['X/indices'],
+            indptr=src['X/indptr'])
+
+    np.testing.assert_array_equal(
+        actual[0],
+        expected.data)
+
+    np.testing.assert_array_equal(
+        actual[1],
+        expected.indices)
+
+    np.testing.assert_array_equal(
+        actual[2],
+        expected.indptr)
