@@ -96,7 +96,7 @@ def extract_h5ad(
     metadata['parent_rows'] = copy.deepcopy(row_list)
 
     with h5py.File(parent_path, 'r', swmr=True) as src:
-        attr_dict = dict(src['X'].attrs)
+        attr_dict = dict(src[f'{data_key}'].attrs)
         is_csr = True
         if 'ecnoding-type' not in attr_dict:
             is_csr = False
@@ -104,7 +104,7 @@ def extract_h5ad(
             is_csr = False
         if not is_csr:
             raise RuntimeError(
-                f"Not obvious that {parent_path} is CSR;\n"
+                f"Not obvious that {parent_path}/{data_key} is CSR;\n"
                 f"X attrs:\n{attr_dict}")
 
         (data,
