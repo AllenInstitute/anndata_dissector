@@ -119,6 +119,7 @@ def test_doing_subdivision(
     n_cells = len(parent_obs_data_fixture)
     n_per = np.ceil(n_cells/n_sub).astype(int)
 
+    row_ct = 0
     for ii in range(1, n_sub+1, 1):
         expected_name = parent_h5ad_fixture.name.replace(
             '.h5ad',
@@ -126,6 +127,7 @@ def test_doing_subdivision(
         expected_path = output_dir / expected_name
         assert expected_path.is_file()
         actual_anndata = anndata.read_h5ad(expected_path, backed='r')
+        row_ct += actual_anndata.X.shape[0]
 
         pd.testing.assert_frame_equal(actual_anndata.var, expected_var)
 
@@ -142,3 +144,5 @@ def test_doing_subdivision(
             expected_x,
             atol=0.0,
             rtol=1.0e-6)
+
+    assert row_ct == x_fixture.shape[0]
