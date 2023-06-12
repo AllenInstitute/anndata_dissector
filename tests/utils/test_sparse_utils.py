@@ -16,7 +16,8 @@ from anndata_dissector.utils.sparse_utils import(
     merge_csr,
     load_disjoint_csr,
     load_csr,
-    merge_index_list)
+    merge_index_list,
+    merge_csr_from_disk)
 
 
 @pytest.fixture
@@ -225,3 +226,71 @@ def test_load_csr(tmp_dir_fixture):
     np.testing.assert_array_equal(
         actual[2],
         expected.indptr)
+
+
+def create_random_sparse_array(rng, n_rows, n_cols):
+    n_tot = n_rows*n_cols
+    data = np.zeros(n_tot, dtype=float)
+    denom = rng.integers(2, 7)
+    chosen = rng.choice(np.arange(n_tot), n_tot//denom, replace=False)
+    data[chosen] = rng.random(len(chosen))
+    return data.reshape(n_rows, n_cols)
+
+
+def test_merge_on_disk(
+        tmp_dir_fixture):
+
+    n_cols = 49
+    n_tot_rows = 0
+
+    baseline = []
+    rng = np.random.default_rng(67122312)
+    h5ad_path_list = []
+    for ii in range(5):
+        n_rows = rng.integers(45, 79)
+        n_tot_rows += n_rows
+        baseline.append(
+            create_random_sparse_array(
+                rng=rng,
+                n_rows=n_rows,
+                n_cols=n_cols))
+
+        h5ad_path = mkstemp_clean(
+            dir=tmp_dir_fixture,
+            suffix='.h5ad')
+        csr = scipy_sparse.csr_matrix(baseline[-1])
+        a_data = anndata.AnnData(X=csr)
+        a_data.write_h5ad(h5ad_path)
+        h5ad_path_list.append(h5ad_path)
+
+    merged_path = mkstemp_clean(
+        dir=tmp_dir_fixture,
+        suffix='.h5')
+
+    merge_csr_from_disk(
+        h5ad_path_list=h5ad_path_list,
+        output_path=merged_path)
+
+    with h5py.File(merged_path, 'r') as src:
+        actual = scipy_sparse.csr_matrix(
+            (src['data'][()],
+             src['indices'][()],
+             src['indptr'][()]),
+            shape=(n_tot_rows, n_cols))
+
+    i0 = 0
+    for expected, original_path in zip(baseline, h5ad_path_list):
+        i1 = i0 + expected.shape[0]
+        np.testing.assert_allclose(
+            actual[i0:i1, :].toarray(),
+            expected,
+            atol=0.0,
+            rtol=1.0e-6)
+        i0 = i1
+
+        orig = anndata.read_h5ad(original_path, backed='r')
+        np.testing.assert_allclose(
+            orig.X[()].toarray(),
+            expected,
+            atol=0.0,
+            rtol=1.0e-6)
