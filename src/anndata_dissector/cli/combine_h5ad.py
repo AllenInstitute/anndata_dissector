@@ -16,7 +16,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--config_path', type=str, default=None)
     parser.add_argument('--clobber', default=False, action='store_true')
-    parser.add_argumetn('--tmp_dir', type=str, default=None)
+    parser.add_argument('--tmp_dir', type=str, default=None)
     args = parser.parse_args()
 
     config = json.load(open(args.config_path, 'rb'))
