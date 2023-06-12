@@ -119,9 +119,11 @@ def test_combine_h5ad(
     combine_h5ad_row_wise(
         h5ad_path_list=h5ad_list_fixture,
         output_path=output_path,
-        tmp_dir=tmp_dir_fixture)
+        tmp_dir=tmp_dir_fixture,
+        metadata={'hello': 'there'})
 
     actual = anndata.read_h5ad(output_path, backed='r')
+    assert actual.uns == {'hello': 'there'}
     expected_var = pd.DataFrame(var_parent_fixture).set_index('col_idx')
     pd.testing.assert_frame_equal(actual.var, expected_var)
 

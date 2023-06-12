@@ -18,7 +18,8 @@ from anndata_dissector.utils.sparse_utils import (
 def combine_h5ad_row_wise(
         h5ad_path_list,
         output_path,
-        tmp_dir=None):
+        tmp_dir=None,
+        metadata=None):
     """
     Combine a list of h5ad files (assuming they are stored as CSR
     matrices)
@@ -32,6 +33,8 @@ def combine_h5ad_row_wise(
     tmp_dir:
         Directory where temporary hdf5 file containing the new sparse
         matrix will be stored.
+    metadata:
+        Optional unstructure metadata
     """
 
     tmp_dir = tempfile.mkdtemp(
@@ -75,7 +78,8 @@ def combine_h5ad_row_wise(
     a_data = anndata.AnnData(
         X=csr_matrix,
         var=var,
-        obs=pd.DataFrame(obs_data).set_index(obs_idx_name))
+        obs=pd.DataFrame(obs_data).set_index(obs_idx_name),
+        uns=metadata)
 
     a_data.write_h5ad(output_path)
 
