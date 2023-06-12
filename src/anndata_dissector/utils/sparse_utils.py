@@ -146,6 +146,53 @@ def load_csr(
     return this_data, these_indices, these_ptrs-these_ptrs.min()
 
 
+def merge_csr_from_disk(
+        h5ad_path_list,
+        output_path):
+    """
+    Merge the X matrices from a series of h5ad files
+
+    Parameters
+    ----------
+    h5ad_path_list:
+        List of h5ad files to be merged (in order)
+    output_path:
+        Path to hdf5 file where the final CSR matrix will be stored
+    """
+    data_list = []
+    indices_list = []
+    indptr_list = []
+    file_handle_list = []
+    try:
+        for pth in h5ad_path_list:
+            file_handle = h5py.File(pth, 'r')
+            attrs_dict = dict(file_handle['X'].attrs)
+            if 'encoding-type' not in attrs_dict:
+                matrix_encoding = 'None'
+            else:
+                matrix_encoding = attrs_dict['encoding-type']
+            if 'csr' not in matrix_encoding:
+                raise RuntimeError(
+                    f"No guarantee that {pth} is stored as CSR\n"
+                    "attrs:\n"
+                    f"{attrs_dict}")
+            file_handle_list.append(file_handle)
+
+            data_list.append(file_handle['X/data'])
+            indices_list.append(file_handle['X/indices'])
+            indptr_list.append(file_handle['X/indptr'])
+
+        merge_csr(
+            data_list=data_list,
+            indices_list=indices_list,
+            indptr_list=indptr_list,
+            tmp_path=output_path)
+
+    finally:
+        for file_handle in file_handle_list:
+            file_handle.close()
+
+
 def merge_csr(
         data_list,
         indices_list,
@@ -238,7 +285,6 @@ def merge_csr(
             i0 = idx1
             ptr0 = ptr1
         indptr[-1] = n_data
-    print(f'merged csr to {tmp_path}')
 
 
 def _merge_csr_chunk(
