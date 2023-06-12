@@ -1,6 +1,7 @@
 import anndata
 import h5py
 import pandas as pd
+import pathlib
 import scipy.sparse as scipy_sparse
 import tempfile
 
@@ -18,7 +19,8 @@ from anndata_dissector.utils.sparse_utils import (
 def combine_h5ad_row_wise(
         h5ad_path_list,
         output_path,
-        tmp_dir=None):
+        tmp_dir=None,
+        clobber=False):
     """
     Combine a list of h5ad files (assuming they are stored as CSR
     matrices)
@@ -32,7 +34,14 @@ def combine_h5ad_row_wise(
     tmp_dir:
         Directory where temporary hdf5 file containing the new sparse
         matrix will be stored.
+    clobber:
+        If false, cannot overwrite existing output file
     """
+
+    output_path = pathlib.Path(output_path)
+    if output_path.exists():
+        if not clobber:
+            raise RuntimeError(f"{output_path} exists")
 
     tmp_dir = tempfile.mkdtemp(
         dir=tmp_dir,

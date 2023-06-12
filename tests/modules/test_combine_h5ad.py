@@ -2,6 +2,7 @@ import pytest
 
 import anndata
 import numpy as np
+import os
 import pandas as pd
 import pathlib
 import scipy.sparse as scipy_sparse
@@ -118,6 +119,8 @@ def test_combine_h5ad(
     output_path = mkstemp_clean(
         dir=tmp_dir_fixture,
         suffix='.h5ad')
+
+    os.unlink(output_path)
 
     combine_h5ad_row_wise(
         h5ad_path_list=h5ad_list_fixture,
