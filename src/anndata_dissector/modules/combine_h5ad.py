@@ -58,6 +58,7 @@ def combine_h5ad_row_wise(
     uns_assigned = False
 
     for pth in h5ad_path_list:
+        print(f"reading {pth}")
         this_var = read_df_from_h5ad(pth, 'var')
         this_obs = read_df_from_h5ad(pth, 'obs')
         this_uns = read_df_from_h5ad(pth, 'uns')
@@ -107,5 +108,5 @@ def combine_h5ad_row_wise(
         uns=uns)
 
     a_data.write_h5ad(output_path)
-
+    print(f"wrote {output_path}")
     _clean_up(tmp_dir)
