@@ -45,9 +45,28 @@ def combine_h5ad_row_wise(
     obs_data = []
     obs_idx_name = None
 
+    uns = None
+    uns_assigned = False
+
     for pth in h5ad_path_list:
         this_var = read_df_from_h5ad(pth, 'var')
         this_obs = read_df_from_h5ad(pth, 'obs')
+        this_uns = read_df_from_h5ad(pth, 'uns')
+
+        if not uns_assigned:
+            uns = this_uns
+            uns_assigned = True
+        elif uns is not None:
+            k_list = list(uns.keys())
+            for k in this_uns:
+                if k not in uns:
+                    continue
+                if this_uns[k] != uns[k]:
+                    uns.pop(k)
+            for k in k_list:
+                if k not in this_uns:
+                    uns.pop(k)
+
         if obs_idx_name is None:
             obs_idx_name = this_obs.index.name
         this_obs = this_obs.reset_index()
@@ -75,7 +94,8 @@ def combine_h5ad_row_wise(
     a_data = anndata.AnnData(
         X=csr_matrix,
         var=var,
-        obs=pd.DataFrame(obs_data).set_index(obs_idx_name))
+        obs=pd.DataFrame(obs_data).set_index(obs_idx_name),
+        uns=uns)
 
     a_data.write_h5ad(output_path)
 

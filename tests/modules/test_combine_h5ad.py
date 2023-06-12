@@ -92,7 +92,10 @@ def h5ad_list_fixture(
         a_data = anndata.AnnData(
             X=this_csr,
             obs=this_obs,
-            var=var)
+            var=var,
+            uns={'hello': 'there',
+                 'number': i0,
+                 'other_number': i1})
         h5ad_path = mkstemp_clean(
             dir=tmp_dir_fixture,
             suffix='.h5ad')
@@ -133,3 +136,5 @@ def test_combine_h5ad(
         x_parent_fixture,
         atol=0.0,
         rtol=1.0e-6)
+
+    assert actual.uns == {'hello': 'there'}
