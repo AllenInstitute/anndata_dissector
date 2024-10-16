@@ -1,0 +1,1442 @@
+{
+  "WMB-10Xv2-HPF": [
+    {
+      "row_idx": 0,
+      "cell_label": "GACTGCGAGCTGCAAG-020_C01",
+      "cell_barcode": "GACTGCGAGCTGCAAG",
+      "library_label": "L8TX_180406_01_F01",
+      "anatomical_division_label": "HPF"
+    },
+    {
+      "row_idx": 1,
+      "cell_label": "CGATGTAGTGCTAGCC-021_D01",
+      "cell_barcode": "CGATGTAGTGCTAGCC",
+      "library_label": "L8TX_180406_01_C02",
+      "anatomical_division_label": "HPF"
+    },
+    {
+      "row_idx": 2,
+      "cell_label": "CACATAGCATGGTTGT-020_D01",
+      "cell_barcode": "CACATAGCATGGTTGT",
+      "library_label": "L8TX_180406_01_B02",
+      "anatomical_division_label": "HPF"
+    },
+    {
+      "row_idx": 3,
+      "cell_label": "CCTAAAGGTGACCAAG-020_C01",
+      "cell_barcode": "CCTAAAGGTGACCAAG",
+      "library_label": "L8TX_180406_01_F01",
+      "anatomical_division_label": "HPF"
+    },
+    {
+      "row_idx": 4,
+      "cell_label": "CGGAGCTAGCTTTGGT-021_D01",
+      "cell_barcode": "CGGAGCTAGCTTTGGT",
+      "library_label": "L8TX_180406_01_C02",
+      "anatomical_division_label": "HPF"
+    },
+    {
+      "row_idx": 5,
+      "cell_label": "GTACTCCCATTCTTAC-020_D01",
+      "cell_barcode": "GTACTCCCATTCTTAC",
+      "library_label": "L8TX_180406_01_B02",
+      "anatomical_division_label": "HPF"
+    },
+    {
+      "row_idx": 6,
+      "cell_label": "GCGGGTTTCCGTTGTC-021_E02",
+      "cell_barcode": "GCGGGTTTCCGTTGTC",
+      "library_label": "L8TX_180406_01_D02",
+      "anatomical_division_label": "HPF"
+    },
+    {
+      "row_idx": 7,
+      "cell_label": "CTCCTAGGTCTAAAGA-020_A01",
+      "cell_barcode": "CTCCTAGGTCTAAAGA",
+      "library_label": "L8TX_180406_01_B01",
+      "anatomical_division_label": "HPF"
+    },
+    {
+      "row_idx": 8,
+      "cell_label": "TACTCGCTCCTTGCCA-020_B01",
+      "cell_barcode": "TACTCGCTCCTTGCCA",
+      "library_label": "L8TX_180406_01_C01",
+      "anatomical_division_label": "HPF"
+    },
+    {
+      "row_idx": 9,
+      "cell_label": "TGAGGGAGTCTAGAGG-020_A01",
+      "cell_barcode": "TGAGGGAGTCTAGAGG",
+      "library_label": "L8TX_180406_01_B01",
+      "anatomical_division_label": "HPF"
+    }
+  ],
+  "WMB-10Xv3-HPF": [
+    {
+      "row_idx": 500,
+      "cell_label": "GCGAGAAGTTAAGGGC-410_B05",
+      "cell_barcode": "GCGAGAAGTTAAGGGC",
+      "library_label": "L8TX_201030_01_C12",
+      "anatomical_division_label": "HPF"
+    },
+    {
+      "row_idx": 501,
+      "cell_label": "AATGGCTCAGCTCCTT-411_B06",
+      "cell_barcode": "AATGGCTCAGCTCCTT",
+      "library_label": "L8TX_201029_01_E10",
+      "anatomical_division_label": "HPF"
+    },
+    {
+      "row_idx": 502,
+      "cell_label": "AACACACGTTGCTTGA-410_B05",
+      "cell_barcode": "AACACACGTTGCTTGA",
+      "library_label": "L8TX_201030_01_C12",
+      "anatomical_division_label": "HPF"
+    },
+    {
+      "row_idx": 503,
+      "cell_label": "CACAGATAGAGGCGGA-410_A05",
+      "cell_barcode": "CACAGATAGAGGCGGA",
+      "library_label": "L8TX_201029_01_A10",
+      "anatomical_division_label": "HPF"
+    },
+    {
+      "row_idx": 504,
+      "cell_label": "AAAGTGAAGCATTTCG-410_B05",
+      "cell_barcode": "AAAGTGAAGCATTTCG",
+      "library_label": "L8TX_201030_01_C12",
+      "anatomical_division_label": "HPF"
+    },
+    {
+      "row_idx": 505,
+      "cell_label": "GATCGTATCGAATCCA-411_B06",
+      "cell_barcode": "GATCGTATCGAATCCA",
+      "library_label": "L8TX_201029_01_E10",
+      "anatomical_division_label": "HPF"
+    },
+    {
+      "row_idx": 506,
+      "cell_label": "AGATGAAAGGACCCAA-410_A05",
+      "cell_barcode": "AGATGAAAGGACCCAA",
+      "library_label": "L8TX_201029_01_A10",
+      "anatomical_division_label": "HPF"
+    },
+    {
+      "row_idx": 507,
+      "cell_label": "TCTCACGGTCAGGAGT-411_A06",
+      "cell_barcode": "TCTCACGGTCAGGAGT",
+      "library_label": "L8TX_201029_01_D10",
+      "anatomical_division_label": "HPF"
+    },
+    {
+      "row_idx": 508,
+      "cell_label": "GATTCTTGTTCGCGTG-410_B05",
+      "cell_barcode": "GATTCTTGTTCGCGTG",
+      "library_label": "L8TX_201030_01_C12",
+      "anatomical_division_label": "HPF"
+    },
+    {
+      "row_idx": 509,
+      "cell_label": "TTTCGATAGTAAAGCT-410_B05",
+      "cell_barcode": "TTTCGATAGTAAAGCT",
+      "library_label": "L8TX_201030_01_C12",
+      "anatomical_division_label": "HPF"
+    }
+  ],
+  "WMB-10Xv2-Isocortex": [
+    {
+      "row_idx": 1122,
+      "cell_label": "ATTACTCCAAGTAATG-010_A01",
+      "cell_barcode": "ATTACTCCAAGTAATG",
+      "library_label": "L8TX_180221_01_B11",
+      "anatomical_division_label": "Isocortex"
+    },
+    {
+      "row_idx": 1123,
+      "cell_label": "CATCAAGTCTGTTTGT-099_E01",
+      "cell_barcode": "CATCAAGTCTGTTTGT",
+      "library_label": "L8TX_190312_01_A03",
+      "anatomical_division_label": "Isocortex"
+    },
+    {
+      "row_idx": 1124,
+      "cell_label": "CGATCGGAGCTCTCGG-099_A01",
+      "cell_barcode": "CGATCGGAGCTCTCGG",
+      "library_label": "L8TX_190312_01_E02",
+      "anatomical_division_label": "Isocortex"
+    },
+    {
+      "row_idx": 1125,
+      "cell_label": "CGTGTAACAAGAAGAG-099_A01",
+      "cell_barcode": "CGTGTAACAAGAAGAG",
+      "library_label": "L8TX_190312_01_E02",
+      "anatomical_division_label": "Isocortex"
+    },
+    {
+      "row_idx": 1126,
+      "cell_label": "TGTATTCAGCGATATA-099_C01",
+      "cell_barcode": "TGTATTCAGCGATATA",
+      "library_label": "L8TX_190312_01_F02",
+      "anatomical_division_label": "Isocortex"
+    },
+    {
+      "row_idx": 1127,
+      "cell_label": "TTCGGTCTCAGTTGAC-099_C01",
+      "cell_barcode": "TTCGGTCTCAGTTGAC",
+      "library_label": "L8TX_190312_01_F02",
+      "anatomical_division_label": "Isocortex"
+    },
+    {
+      "row_idx": 1180,
+      "cell_label": "TACTCATTCTCGGACG-010_C01",
+      "cell_barcode": "TACTCATTCTCGGACG",
+      "library_label": "L8TX_180221_01_D11",
+      "anatomical_division_label": "Isocortex"
+    },
+    {
+      "row_idx": 1181,
+      "cell_label": "CGTAGCGAGTAGTGCG-100_D01",
+      "cell_barcode": "CGTAGCGAGTAGTGCG",
+      "library_label": "L8TX_190312_01_D02",
+      "anatomical_division_label": "Isocortex"
+    },
+    {
+      "row_idx": 1182,
+      "cell_label": "GTCTTCGTCAGAAATG-010_A01",
+      "cell_barcode": "GTCTTCGTCAGAAATG",
+      "library_label": "L8TX_180221_01_B11",
+      "anatomical_division_label": "Isocortex"
+    },
+    {
+      "row_idx": 1183,
+      "cell_label": "GCACATATCACCAGGC-1.19_C01",
+      "cell_barcode": "GCACATATCACCAGGC",
+      "library_label": "L8TX_180115_01_G10",
+      "anatomical_division_label": "Isocortex"
+    }
+  ],
+  "WMB-10Xv3-Isocortex": [
+    {
+      "row_idx": 1196,
+      "cell_label": "GCACTAAGTACAAGTA-399_B02",
+      "cell_barcode": "GCACTAAGTACAAGTA",
+      "library_label": "L8TX_201022_01_H06",
+      "anatomical_division_label": "Isocortex"
+    },
+    {
+      "row_idx": 1274,
+      "cell_label": "CAGAGCCGTCCTGGTG-399_A02",
+      "cell_barcode": "CAGAGCCGTCCTGGTG",
+      "library_label": "L8TX_201023_01_A09",
+      "anatomical_division_label": "Isocortex"
+    },
+    {
+      "row_idx": 1301,
+      "cell_label": "CGCCATTCACGACAGA-403_A06",
+      "cell_barcode": "CGCCATTCACGACAGA",
+      "library_label": "L8TX_201022_01_B07",
+      "anatomical_division_label": "Isocortex"
+    },
+    {
+      "row_idx": 1361,
+      "cell_label": "GGGTTTATCCGATCGG-399_B02",
+      "cell_barcode": "GGGTTTATCCGATCGG",
+      "library_label": "L8TX_201022_01_H06",
+      "anatomical_division_label": "Isocortex"
+    },
+    {
+      "row_idx": 1382,
+      "cell_label": "GTGTGATCAGACAAAT-399_B02",
+      "cell_barcode": "GTGTGATCAGACAAAT",
+      "library_label": "L8TX_201022_01_H06",
+      "anatomical_division_label": "Isocortex"
+    },
+    {
+      "row_idx": 1941,
+      "cell_label": "TGCAGATCATCAGTGT-416_A02",
+      "cell_barcode": "TGCAGATCATCAGTGT",
+      "library_label": "L8TX_201105_01_A01",
+      "anatomical_division_label": "Isocortex"
+    },
+    {
+      "row_idx": 1942,
+      "cell_label": "TGCATGAGTAGTCGGA-391_A03",
+      "cell_barcode": "TGCATGAGTAGTCGGA",
+      "library_label": "L8TX_201015_01_C03",
+      "anatomical_division_label": "Isocortex"
+    },
+    {
+      "row_idx": 1943,
+      "cell_label": "GTCCCATGTCTCGCGA-406_A01",
+      "cell_barcode": "GTCCCATGTCTCGCGA",
+      "library_label": "L8TX_201030_01_F11",
+      "anatomical_division_label": "Isocortex"
+    },
+    {
+      "row_idx": 1944,
+      "cell_label": "TTTCACAGTCAGTTTG-416_A02",
+      "cell_barcode": "TTTCACAGTCAGTTTG",
+      "library_label": "L8TX_201105_01_A01",
+      "anatomical_division_label": "Isocortex"
+    },
+    {
+      "row_idx": 1945,
+      "cell_label": "TGGATGTGTGGCACTC-416_A02",
+      "cell_barcode": "TGGATGTGTGGCACTC",
+      "library_label": "L8TX_201105_01_A01",
+      "anatomical_division_label": "Isocortex"
+    }
+  ],
+  "WMB-10Xv2-HY": [
+    {
+      "row_idx": 2066,
+      "cell_label": "AACGTTGAGGCTAGCA-063_E01",
+      "cell_barcode": "AACGTTGAGGCTAGCA",
+      "library_label": "L8TX_181031_01_E08",
+      "anatomical_division_label": "HY"
+    },
+    {
+      "row_idx": 2221,
+      "cell_label": "GCATGATAGGGATGGG-062_C01",
+      "cell_barcode": "GCATGATAGGGATGGG",
+      "library_label": "L8TX_181019_01_G06",
+      "anatomical_division_label": "HY"
+    },
+    {
+      "row_idx": 2227,
+      "cell_label": "AGGGTGAGTGAAAGAG-026_A01",
+      "cell_barcode": "AGGGTGAGTGAAAGAG",
+      "library_label": "L8TX_180504_01_F01",
+      "anatomical_division_label": "HY"
+    },
+    {
+      "row_idx": 2228,
+      "cell_label": "GAGTCCGTCCGCGCAA-026_B01",
+      "cell_barcode": "GAGTCCGTCCGCGCAA",
+      "library_label": "L8TX_180504_01_G01",
+      "anatomical_division_label": "HY"
+    },
+    {
+      "row_idx": 2271,
+      "cell_label": "AGCCTAAAGCCGCCTA-026_A01",
+      "cell_barcode": "AGCCTAAAGCCGCCTA",
+      "library_label": "L8TX_180504_01_F01",
+      "anatomical_division_label": "HY"
+    },
+    {
+      "row_idx": 2275,
+      "cell_label": "TACTTACGTGTGAATA-031_A02",
+      "cell_barcode": "TACTTACGTGTGAATA",
+      "library_label": "L8TX_180607_01_D05",
+      "anatomical_division_label": "HY"
+    },
+    {
+      "row_idx": 2536,
+      "cell_label": "ACAGCCGTCAGAGGTG-063_D01",
+      "cell_barcode": "ACAGCCGTCAGAGGTG",
+      "library_label": "L8TX_181031_01_C07",
+      "anatomical_division_label": "HY"
+    },
+    {
+      "row_idx": 5943,
+      "cell_label": "GATTCAGAGAAGGACA-063_A01",
+      "cell_barcode": "GATTCAGAGAAGGACA",
+      "library_label": "L8TX_181031_01_H06",
+      "anatomical_division_label": "HY"
+    },
+    {
+      "row_idx": 5950,
+      "cell_label": "AACACGTTCTGGGCCA-026_A01",
+      "cell_barcode": "AACACGTTCTGGGCCA",
+      "library_label": "L8TX_180504_01_F01",
+      "anatomical_division_label": "HY"
+    },
+    {
+      "row_idx": 5951,
+      "cell_label": "CACAGTAAGGGTCGAT-026_B01",
+      "cell_barcode": "CACAGTAAGGGTCGAT",
+      "library_label": "L8TX_180504_01_G01",
+      "anatomical_division_label": "HY"
+    }
+  ],
+  "WMB-10Xv2-TH": [
+    {
+      "row_idx": 2067,
+      "cell_label": "CAGGTGCAGGCTAGCA-040_C01",
+      "cell_barcode": "CAGGTGCAGGCTAGCA",
+      "library_label": "L8TX_180815_01_E08",
+      "anatomical_division_label": "TH"
+    },
+    {
+      "row_idx": 6001,
+      "cell_label": "TGCGCAGGTTGCGCAC-045_C01",
+      "cell_barcode": "TGCGCAGGTTGCGCAC",
+      "library_label": "L8TX_180829_01_C10",
+      "anatomical_division_label": "TH"
+    },
+    {
+      "row_idx": 6003,
+      "cell_label": "CGATGTATCTTGCCGT-042_B01",
+      "cell_barcode": "CGATGTATCTTGCCGT",
+      "library_label": "L8TX_180829_01_B09",
+      "anatomical_division_label": "TH"
+    },
+    {
+      "row_idx": 13405,
+      "cell_label": "GACTAACGTCCTCTTG-040_B01",
+      "cell_barcode": "GACTAACGTCCTCTTG",
+      "library_label": "L8TX_180815_01_D08",
+      "anatomical_division_label": "TH"
+    },
+    {
+      "row_idx": 13406,
+      "cell_label": "GATCGTACAACTGCTA-040_B01",
+      "cell_barcode": "GATCGTACAACTGCTA",
+      "library_label": "L8TX_180815_01_D08",
+      "anatomical_division_label": "TH"
+    },
+    {
+      "row_idx": 13433,
+      "cell_label": "GTGCAGCTCACAGGCC-040_C01",
+      "cell_barcode": "GTGCAGCTCACAGGCC",
+      "library_label": "L8TX_180815_01_E08",
+      "anatomical_division_label": "TH"
+    },
+    {
+      "row_idx": 39897,
+      "cell_label": "CGATCGGTCCTTTCGG-045_A01",
+      "cell_barcode": "CGATCGGTCCTTTCGG",
+      "library_label": "L8TX_180829_01_F09",
+      "anatomical_division_label": "TH"
+    },
+    {
+      "row_idx": 43226,
+      "cell_label": "TGAGCCGTCGGTGTTA-043_A01",
+      "cell_barcode": "TGAGCCGTCGGTGTTA",
+      "library_label": "L8TX_180829_01_C09",
+      "anatomical_division_label": "TH"
+    },
+    {
+      "row_idx": 46404,
+      "cell_label": "CTTAACTTCGCTTAGA-041_C01",
+      "cell_barcode": "CTTAACTTCGCTTAGA",
+      "library_label": "L8TX_180815_01_G08",
+      "anatomical_division_label": "TH"
+    },
+    {
+      "row_idx": 46695,
+      "cell_label": "TTTGCGCGTCTTTCAT-103_A01",
+      "cell_barcode": "TTTGCGCGTCTTTCAT",
+      "library_label": "L8TX_190321_01_F03",
+      "anatomical_division_label": "TH"
+    }
+  ],
+  "WMB-10Xv3-PAL": [
+    {
+      "row_idx": 2068,
+      "cell_label": "TGATTCTGTTCTCAGA-125_A01",
+      "cell_barcode": "TGATTCTGTTCTCAGA",
+      "library_label": "L8TX_190531_01_G01",
+      "anatomical_division_label": "PAL"
+    },
+    {
+      "row_idx": 2073,
+      "cell_label": "AAGTTCGTCTACTCAT-119_B01",
+      "cell_barcode": "AAGTTCGTCTACTCAT",
+      "library_label": "L8TX_190509_01_G09",
+      "anatomical_division_label": "PAL"
+    },
+    {
+      "row_idx": 2075,
+      "cell_label": "ACCATTTTCGTCTAAG-123_C01",
+      "cell_barcode": "ACCATTTTCGTCTAAG",
+      "library_label": "L8TX_190531_01_E01",
+      "anatomical_division_label": "PAL"
+    },
+    {
+      "row_idx": 2076,
+      "cell_label": "ACTCTCGCACGCCACA-119_C01",
+      "cell_barcode": "ACTCTCGCACGCCACA",
+      "library_label": "L8TX_190509_01_H09",
+      "anatomical_division_label": "PAL"
+    },
+    {
+      "row_idx": 2077,
+      "cell_label": "AGATGAACACACCAGC-126_A01",
+      "cell_barcode": "AGATGAACACACCAGC",
+      "library_label": "L8TX_190614_01_A06",
+      "anatomical_division_label": "PAL"
+    },
+    {
+      "row_idx": 2079,
+      "cell_label": "AGGGCCTTCTGGTTGA-119_D01",
+      "cell_barcode": "AGGGCCTTCTGGTTGA",
+      "library_label": "L8TX_190509_01_A10",
+      "anatomical_division_label": "PAL"
+    },
+    {
+      "row_idx": 2080,
+      "cell_label": "CAAGAGGTCAAAGGAT-126_D01",
+      "cell_barcode": "CAAGAGGTCAAAGGAT",
+      "library_label": "L8TX_190614_01_D06",
+      "anatomical_division_label": "PAL"
+    },
+    {
+      "row_idx": 2084,
+      "cell_label": "CCACACTTCCAGTGCG-123_A01",
+      "cell_barcode": "CCACACTTCCAGTGCG",
+      "library_label": "L8TX_190531_01_C01",
+      "anatomical_division_label": "PAL"
+    },
+    {
+      "row_idx": 2086,
+      "cell_label": "CCTTTGGAGTTCGGTT-106_C01",
+      "cell_barcode": "CCTTTGGAGTTCGGTT",
+      "library_label": "L8TX_190327_01_C04",
+      "anatomical_division_label": "PAL"
+    },
+    {
+      "row_idx": 2087,
+      "cell_label": "CGTAAGTTCGGATACT-417_A03",
+      "cell_barcode": "CGTAAGTTCGGATACT",
+      "library_label": "L8TX_201105_01_F01",
+      "anatomical_division_label": "PAL"
+    }
+  ],
+  "WMB-10Xv3-STR": [
+    {
+      "row_idx": 2069,
+      "cell_label": "CGAGTGCTCTGCATAG-124_D01",
+      "cell_barcode": "CGAGTGCTCTGCATAG",
+      "library_label": "L8TX_190531_01_C02",
+      "anatomical_division_label": "STR"
+    },
+    {
+      "row_idx": 2070,
+      "cell_label": "ATGAGGGAGAGTCCGA-345_B05",
+      "cell_barcode": "ATGAGGGAGAGTCCGA",
+      "library_label": "L8TX_200827_01_C10",
+      "anatomical_division_label": "STR"
+    },
+    {
+      "row_idx": 2071,
+      "cell_label": "ACGTCCTAGGCATTTC-107_B01",
+      "cell_barcode": "ACGTCCTAGGCATTTC",
+      "library_label": "L8TX_190327_01_G04",
+      "anatomical_division_label": "STR"
+    },
+    {
+      "row_idx": 2072,
+      "cell_label": "AACAACCGTGTTTCTT-345_B05",
+      "cell_barcode": "AACAACCGTGTTTCTT",
+      "library_label": "L8TX_200827_01_C10",
+      "anatomical_division_label": "STR"
+    },
+    {
+      "row_idx": 2074,
+      "cell_label": "ACACAGTGTACGATCT-107_B01",
+      "cell_barcode": "ACACAGTGTACGATCT",
+      "library_label": "L8TX_190327_01_G04",
+      "anatomical_division_label": "STR"
+    },
+    {
+      "row_idx": 2078,
+      "cell_label": "AGGAGGTCATCCTGTC-346_A06",
+      "cell_barcode": "AGGAGGTCATCCTGTC",
+      "library_label": "L8TX_200903_01_B12",
+      "anatomical_division_label": "STR"
+    },
+    {
+      "row_idx": 2081,
+      "cell_label": "CACCAAATCTAGCAAC-118_B01",
+      "cell_barcode": "CACCAAATCTAGCAAC",
+      "library_label": "L8TX_190509_01_D09",
+      "anatomical_division_label": "STR"
+    },
+    {
+      "row_idx": 2082,
+      "cell_label": "CACTTCGAGCGTGCCT-118_A01",
+      "cell_barcode": "CACTTCGAGCGTGCCT",
+      "library_label": "L8TX_190509_01_C09",
+      "anatomical_division_label": "STR"
+    },
+    {
+      "row_idx": 2083,
+      "cell_label": "CATACTTCAGAGATTA-345_A05",
+      "cell_barcode": "CATACTTCAGAGATTA",
+      "library_label": "L8TX_200827_01_C09",
+      "anatomical_division_label": "STR"
+    },
+    {
+      "row_idx": 2085,
+      "cell_label": "CCCATTGTCACAAGGG-118_A01",
+      "cell_barcode": "CCCATTGTCACAAGGG",
+      "library_label": "L8TX_190509_01_C09",
+      "anatomical_division_label": "STR"
+    }
+  ],
+  "WMB-10Xv3-CTXsp": [
+    {
+      "row_idx": 2188,
+      "cell_label": "GCCCGAAGTCAGTTTG-344_C04",
+      "cell_barcode": "GCCCGAAGTCAGTTTG",
+      "library_label": "L8TX_200827_01_E10",
+      "anatomical_division_label": "CTXsp"
+    },
+    {
+      "row_idx": 2242,
+      "cell_label": "AGGTTACTCGCGCCAA-332_B01",
+      "cell_barcode": "AGGTTACTCGCGCCAA",
+      "library_label": "L8TX_200820_01_D01",
+      "anatomical_division_label": "CTXsp"
+    },
+    {
+      "row_idx": 2349,
+      "cell_label": "ATGAGGGAGTGTTCCA-332_A01",
+      "cell_barcode": "ATGAGGGAGTGTTCCA",
+      "library_label": "L8TX_200820_01_E02",
+      "anatomical_division_label": "CTXsp"
+    },
+    {
+      "row_idx": 2362,
+      "cell_label": "CATAGACAGTCTAACC-299_B02",
+      "cell_barcode": "CATAGACAGTCTAACC",
+      "library_label": "L8TX_200723_01_G09",
+      "anatomical_division_label": "CTXsp"
+    },
+    {
+      "row_idx": 2392,
+      "cell_label": "GAGTTACCATGACGAG-299_A02",
+      "cell_barcode": "GAGTTACCATGACGAG",
+      "library_label": "L8TX_200723_01_F09",
+      "anatomical_division_label": "CTXsp"
+    },
+    {
+      "row_idx": 2409,
+      "cell_label": "GGAGCAATCTCTCGAC-299_A02",
+      "cell_barcode": "GGAGCAATCTCTCGAC",
+      "library_label": "L8TX_200723_01_F09",
+      "anatomical_division_label": "CTXsp"
+    },
+    {
+      "row_idx": 2411,
+      "cell_label": "GGCTTGGTCTCCGAGG-332_B01",
+      "cell_barcode": "GGCTTGGTCTCCGAGG",
+      "library_label": "L8TX_200820_01_D01",
+      "anatomical_division_label": "CTXsp"
+    },
+    {
+      "row_idx": 2456,
+      "cell_label": "TCGAAGTGTTCGGTCG-308_B03",
+      "cell_barcode": "TCGAAGTGTTCGGTCG",
+      "library_label": "L8TX_200730_01_H12",
+      "anatomical_division_label": "CTXsp"
+    },
+    {
+      "row_idx": 2743,
+      "cell_label": "GAGACTTAGTGCCCGT-308_A03",
+      "cell_barcode": "GAGACTTAGTGCCCGT",
+      "library_label": "L8TX_200730_01_B02",
+      "anatomical_division_label": "CTXsp"
+    },
+    {
+      "row_idx": 2754,
+      "cell_label": "AGCCAATAGTAGCCAG-344_B04",
+      "cell_barcode": "AGCCAATAGTAGCCAG",
+      "library_label": "L8TX_200827_01_G08",
+      "anatomical_division_label": "CTXsp"
+    }
+  ],
+  "WMB-10Xv3-HY": [
+    {
+      "row_idx": 2210,
+      "cell_label": "TGAGGGACACCAAATC-392_A04",
+      "cell_barcode": "TGAGGGACACCAAATC",
+      "library_label": "L8TX_201015_01_B03",
+      "anatomical_division_label": "HY"
+    },
+    {
+      "row_idx": 2237,
+      "cell_label": "AACGGGAGTACGTGAG-469_A03",
+      "cell_barcode": "AACGGGAGTACGTGAG",
+      "library_label": "L8TX_201217_01_F06",
+      "anatomical_division_label": "HY"
+    },
+    {
+      "row_idx": 2255,
+      "cell_label": "GCTACAAAGACCATTC-326_D05",
+      "cell_barcode": "GCTACAAAGACCATTC",
+      "library_label": "L8TX_200813_01_G10",
+      "anatomical_division_label": "HY"
+    },
+    {
+      "row_idx": 2367,
+      "cell_label": "CCGAACGGTGCCTTCT-392_C04",
+      "cell_barcode": "CCGAACGGTGCCTTCT",
+      "library_label": "L8TX_201015_01_E02",
+      "anatomical_division_label": "HY"
+    },
+    {
+      "row_idx": 2381,
+      "cell_label": "CTTAGGAAGGACAAGA-577_A03",
+      "cell_barcode": "CTTAGGAAGGACAAGA",
+      "library_label": "L8TX_210325_01_H07",
+      "anatomical_division_label": "HY"
+    },
+    {
+      "row_idx": 2404,
+      "cell_label": "GCTGGGTGTACCCAGC-469_A03",
+      "cell_barcode": "GCTGGGTGTACCCAGC",
+      "library_label": "L8TX_201217_01_F06",
+      "anatomical_division_label": "HY"
+    },
+    {
+      "row_idx": 2978,
+      "cell_label": "CCGATGGAGATGAACT-392_C04",
+      "cell_barcode": "CCGATGGAGATGAACT",
+      "library_label": "L8TX_201015_01_E02",
+      "anatomical_division_label": "HY"
+    },
+    {
+      "row_idx": 3680,
+      "cell_label": "GACTCAATCGAACACT-326_D05",
+      "cell_barcode": "GACTCAATCGAACACT",
+      "library_label": "L8TX_200813_01_G10",
+      "anatomical_division_label": "HY"
+    },
+    {
+      "row_idx": 5857,
+      "cell_label": "AACGGGACATATCGGT-392_B04",
+      "cell_barcode": "AACGGGACATATCGGT",
+      "library_label": "L8TX_201016_01_E04",
+      "anatomical_division_label": "HY"
+    },
+    {
+      "row_idx": 6037,
+      "cell_label": "CCAATGAAGGAGAGGC-1183_A01",
+      "cell_barcode": "CCAATGAAGGAGAGGC",
+      "library_label": "L8TX_220407_01_E06",
+      "anatomical_division_label": "HY"
+    }
+  ],
+  "WMB-10Xv2-OLF": [
+    {
+      "row_idx": 2222,
+      "cell_label": "CCGTGGAAGGACATTA-086_C01",
+      "cell_barcode": "CCGTGGAAGGACATTA",
+      "library_label": "L8TX_190205_01_C08",
+      "anatomical_division_label": "OLF"
+    },
+    {
+      "row_idx": 2223,
+      "cell_label": "TCTCATAGTTTGACAC-086_C01",
+      "cell_barcode": "TCTCATAGTTTGACAC",
+      "library_label": "L8TX_190205_01_C08",
+      "anatomical_division_label": "OLF"
+    },
+    {
+      "row_idx": 2224,
+      "cell_label": "AGTCTTTAGCGTGAAC-113_A01",
+      "cell_barcode": "AGTCTTTAGCGTGAAC",
+      "library_label": "L8TX_190423_01_A07",
+      "anatomical_division_label": "OLF"
+    },
+    {
+      "row_idx": 2225,
+      "cell_label": "TAGGCATAGGCACATG-113_B01",
+      "cell_barcode": "TAGGCATAGGCACATG",
+      "library_label": "L8TX_190423_01_B07",
+      "anatomical_division_label": "OLF"
+    },
+    {
+      "row_idx": 2229,
+      "cell_label": "CTCGTCATCATGGTCA-086_C01",
+      "cell_barcode": "CTCGTCATCATGGTCA",
+      "library_label": "L8TX_190205_01_C08",
+      "anatomical_division_label": "OLF"
+    },
+    {
+      "row_idx": 2272,
+      "cell_label": "ACGGGTCGTGGCAAAC-081_C01",
+      "cell_barcode": "ACGGGTCGTGGCAAAC",
+      "library_label": "L8TX_190122_01_F05",
+      "anatomical_division_label": "OLF"
+    },
+    {
+      "row_idx": 2496,
+      "cell_label": "AGCAGCCAGCCAGAAC-084_C01",
+      "cell_barcode": "AGCAGCCAGCCAGAAC",
+      "library_label": "L8TX_190205_01_H07",
+      "anatomical_division_label": "OLF"
+    },
+    {
+      "row_idx": 2497,
+      "cell_label": "AACTCAGCAGCCAGAA-112_A01",
+      "cell_barcode": "AACTCAGCAGCCAGAA",
+      "library_label": "L8TX_190423_01_E06",
+      "anatomical_division_label": "OLF"
+    },
+    {
+      "row_idx": 2498,
+      "cell_label": "AGGCCACAGCCACCTG-112_A01",
+      "cell_barcode": "AGGCCACAGCCACCTG",
+      "library_label": "L8TX_190423_01_E06",
+      "anatomical_division_label": "OLF"
+    },
+    {
+      "row_idx": 2499,
+      "cell_label": "CCAATCCGTAGCGCAA-112_A01",
+      "cell_barcode": "CCAATCCGTAGCGCAA",
+      "library_label": "L8TX_190423_01_E06",
+      "anatomical_division_label": "OLF"
+    }
+  ],
+  "WMB-10Xv2-CTXsp": [
+    {
+      "row_idx": 2226,
+      "cell_label": "ATTTCTGAGGTTACCT-078_C01",
+      "cell_barcode": "ATTTCTGAGGTTACCT",
+      "library_label": "L8TX_190116_01_F04",
+      "anatomical_division_label": "CTXsp"
+    },
+    {
+      "row_idx": 2265,
+      "cell_label": "GAGCAGACAAGTTCTG-079_C01",
+      "cell_barcode": "GAGCAGACAAGTTCTG",
+      "library_label": "L8TX_190116_01_E04",
+      "anatomical_division_label": "CTXsp"
+    },
+    {
+      "row_idx": 2266,
+      "cell_label": "CAGCATACACATCCAA-078_D01",
+      "cell_barcode": "CAGCATACACATCCAA",
+      "library_label": "L8TX_190116_01_G04",
+      "anatomical_division_label": "CTXsp"
+    },
+    {
+      "row_idx": 2267,
+      "cell_label": "CTGAAACAGCTAACTC-078_D01",
+      "cell_barcode": "CTGAAACAGCTAACTC",
+      "library_label": "L8TX_190116_01_G04",
+      "anatomical_division_label": "CTXsp"
+    },
+    {
+      "row_idx": 2268,
+      "cell_label": "TCCCGATTCCTCATTA-078_D01",
+      "cell_barcode": "TCCCGATTCCTCATTA",
+      "library_label": "L8TX_190116_01_G04",
+      "anatomical_division_label": "CTXsp"
+    },
+    {
+      "row_idx": 2269,
+      "cell_label": "ACCTTTACATACCATG-101_C01",
+      "cell_barcode": "ACCTTTACATACCATG",
+      "library_label": "L8TX_190321_01_A04",
+      "anatomical_division_label": "CTXsp"
+    },
+    {
+      "row_idx": 2270,
+      "cell_label": "CGACTTCCAAGGCTCC-101_C01",
+      "cell_barcode": "CGACTTCCAAGGCTCC",
+      "library_label": "L8TX_190321_01_A04",
+      "anatomical_division_label": "CTXsp"
+    },
+    {
+      "row_idx": 2273,
+      "cell_label": "CGAGCCAAGCGTGAGT-078_C01",
+      "cell_barcode": "CGAGCCAAGCGTGAGT",
+      "library_label": "L8TX_190116_01_F04",
+      "anatomical_division_label": "CTXsp"
+    },
+    {
+      "row_idx": 2274,
+      "cell_label": "GATGAAAAGTGGGCTA-101_C01",
+      "cell_barcode": "GATGAAAAGTGGGCTA",
+      "library_label": "L8TX_190321_01_A04",
+      "anatomical_division_label": "CTXsp"
+    },
+    {
+      "row_idx": 2588,
+      "cell_label": "GAGCAGAGTTTAAGCC-078_D01",
+      "cell_barcode": "GAGCAGAGTTTAAGCC",
+      "library_label": "L8TX_190116_01_G04",
+      "anatomical_division_label": "CTXsp"
+    }
+  ],
+  "WMB-10Xv3-OLF": [
+    {
+      "row_idx": 2434,
+      "cell_label": "GTTCATTGTACTGACT-487_A03",
+      "cell_barcode": "GTTCATTGTACTGACT",
+      "library_label": "L8TX_210114_01_A01",
+      "anatomical_division_label": "OLF"
+    },
+    {
+      "row_idx": 2539,
+      "cell_label": "GTCTTTAAGGTAAGGA-487_A03",
+      "cell_barcode": "GTCTTTAAGGTAAGGA",
+      "library_label": "L8TX_210114_01_A01",
+      "anatomical_division_label": "OLF"
+    },
+    {
+      "row_idx": 2540,
+      "cell_label": "CGTCCATTCGTGTTCC-498_A02",
+      "cell_barcode": "CGTCCATTCGTGTTCC",
+      "library_label": "L8TX_210121_01_F02",
+      "anatomical_division_label": "OLF"
+    },
+    {
+      "row_idx": 2545,
+      "cell_label": "AATCGACGTGTCGATT-484_B01",
+      "cell_barcode": "AATCGACGTGTCGATT",
+      "library_label": "L8TX_210107_02_H10",
+      "anatomical_division_label": "OLF"
+    },
+    {
+      "row_idx": 2546,
+      "cell_label": "ACCACAAAGATAACAC-487_A03",
+      "cell_barcode": "ACCACAAAGATAACAC",
+      "library_label": "L8TX_210114_01_A01",
+      "anatomical_division_label": "OLF"
+    },
+    {
+      "row_idx": 2554,
+      "cell_label": "ATCCCTGGTATATGGA-498_A02",
+      "cell_barcode": "ATCCCTGGTATATGGA",
+      "library_label": "L8TX_210121_01_F02",
+      "anatomical_division_label": "OLF"
+    },
+    {
+      "row_idx": 2557,
+      "cell_label": "ATGGGAGCAGAGCCCT-487_A03",
+      "cell_barcode": "ATGGGAGCAGAGCCCT",
+      "library_label": "L8TX_210114_01_A01",
+      "anatomical_division_label": "OLF"
+    },
+    {
+      "row_idx": 2562,
+      "cell_label": "CATTCATAGTAAACTG-490_A06",
+      "cell_barcode": "CATTCATAGTAAACTG",
+      "library_label": "L8TX_210114_01_C01",
+      "anatomical_division_label": "OLF"
+    },
+    {
+      "row_idx": 2566,
+      "cell_label": "CGGGTGTGTCCTCCTA-487_A03",
+      "cell_barcode": "CGGGTGTGTCCTCCTA",
+      "library_label": "L8TX_210114_01_A01",
+      "anatomical_division_label": "OLF"
+    },
+    {
+      "row_idx": 2570,
+      "cell_label": "GACTCTCAGGACGCAT-512_A01",
+      "cell_barcode": "GACTCTCAGGACGCAT",
+      "library_label": "L8TX_210204_01_H05",
+      "anatomical_division_label": "OLF"
+    }
+  ],
+  "WMB-10Xv3-TH": [
+    {
+      "row_idx": 8231,
+      "cell_label": "AGAAGTATCATTACGG-290_B01",
+      "cell_barcode": "AGAAGTATCATTACGG",
+      "library_label": "L8TX_200716_01_B06",
+      "anatomical_division_label": "TH"
+    },
+    {
+      "row_idx": 13456,
+      "cell_label": "TTGACCCCAGGCCTGT-290_B01",
+      "cell_barcode": "TTGACCCCAGGCCTGT",
+      "library_label": "L8TX_200716_01_B06",
+      "anatomical_division_label": "TH"
+    },
+    {
+      "row_idx": 13467,
+      "cell_label": "AATGCCATCGCTAATG-290_B01",
+      "cell_barcode": "AATGCCATCGCTAATG",
+      "library_label": "L8TX_200716_01_B06",
+      "anatomical_division_label": "TH"
+    },
+    {
+      "row_idx": 13540,
+      "cell_label": "TGCGATAAGTCATGGG-290_B01",
+      "cell_barcode": "TGCGATAAGTCATGGG",
+      "library_label": "L8TX_200716_01_B06",
+      "anatomical_division_label": "TH"
+    },
+    {
+      "row_idx": 13548,
+      "cell_label": "CATCCCAAGATCCGAG-294_B05",
+      "cell_barcode": "CATCCCAAGATCCGAG",
+      "library_label": "L8TX_200716_01_H06",
+      "anatomical_division_label": "TH"
+    },
+    {
+      "row_idx": 14873,
+      "cell_label": "GTTTACTTCACTGTCC-300_B03",
+      "cell_barcode": "GTTTACTTCACTGTCC",
+      "library_label": "L8TX_200723_01_A10",
+      "anatomical_division_label": "TH"
+    },
+    {
+      "row_idx": 14903,
+      "cell_label": "TCATACTGTTGATGTC-300_B03",
+      "cell_barcode": "TCATACTGTTGATGTC",
+      "library_label": "L8TX_200723_01_A10",
+      "anatomical_division_label": "TH"
+    },
+    {
+      "row_idx": 14985,
+      "cell_label": "TTTGGTTCAGAAGTGC-300_B03",
+      "cell_barcode": "TTTGGTTCAGAAGTGC",
+      "library_label": "L8TX_200723_01_A10",
+      "anatomical_division_label": "TH"
+    },
+    {
+      "row_idx": 17956,
+      "cell_label": "GTGCTGGAGACGCCCT-300_B03",
+      "cell_barcode": "GTGCTGGAGACGCCCT",
+      "library_label": "L8TX_200723_01_A10",
+      "anatomical_division_label": "TH"
+    },
+    {
+      "row_idx": 21315,
+      "cell_label": "GAATAGATCCTCATAT-300_B03",
+      "cell_barcode": "GAATAGATCCTCATAT",
+      "library_label": "L8TX_200723_01_A10",
+      "anatomical_division_label": "TH"
+    }
+  ],
+  "WMB-10Xv2-MB": [
+    {
+      "row_idx": 13446,
+      "cell_label": "CGGGTCAGTTAGTGGG-059_E01",
+      "cell_barcode": "CGGGTCAGTTAGTGGG",
+      "library_label": "L8TX_181011_01_F02",
+      "anatomical_division_label": "MB"
+    },
+    {
+      "row_idx": 35707,
+      "cell_label": "CGCGTTTGTCTAGGTT-067_B01",
+      "cell_barcode": "CGCGTTTGTCTAGGTT",
+      "library_label": "L8TX_181116_01_B11",
+      "anatomical_division_label": "MB"
+    },
+    {
+      "row_idx": 164110,
+      "cell_label": "GAATAAGGTGCAGACA-059_E01",
+      "cell_barcode": "GAATAAGGTGCAGACA",
+      "library_label": "L8TX_181011_01_F02",
+      "anatomical_division_label": "MB"
+    },
+    {
+      "row_idx": 194148,
+      "cell_label": "CCTCTGAGTAATAGCA-059_C01",
+      "cell_barcode": "CCTCTGAGTAATAGCA",
+      "library_label": "L8TX_181011_01_E02",
+      "anatomical_division_label": "MB"
+    },
+    {
+      "row_idx": 205077,
+      "cell_label": "TTGAACGTCAGTTCGA-059_D01",
+      "cell_barcode": "TTGAACGTCAGTTCGA",
+      "library_label": "L8TX_181011_01_F03",
+      "anatomical_division_label": "MB"
+    },
+    {
+      "row_idx": 209157,
+      "cell_label": "GAGCAGATCTCCAGGG-059_E01",
+      "cell_barcode": "GAGCAGATCTCCAGGG",
+      "library_label": "L8TX_181011_01_F02",
+      "anatomical_division_label": "MB"
+    },
+    {
+      "row_idx": 217880,
+      "cell_label": "TTCGAAGCAACTGCGC-065_A01",
+      "cell_barcode": "TTCGAAGCAACTGCGC",
+      "library_label": "L8TX_181031_01_G07",
+      "anatomical_division_label": "MB"
+    },
+    {
+      "row_idx": 221312,
+      "cell_label": "AACGTTGGTGCTTCTC-059_A01",
+      "cell_barcode": "AACGTTGGTGCTTCTC",
+      "library_label": "L8TX_181011_01_D03",
+      "anatomical_division_label": "MB"
+    },
+    {
+      "row_idx": 253507,
+      "cell_label": "GCTGCGACATGCCCGA-059_E01",
+      "cell_barcode": "GCTGCGACATGCCCGA",
+      "library_label": "L8TX_181011_01_F02",
+      "anatomical_division_label": "MB"
+    },
+    {
+      "row_idx": 273005,
+      "cell_label": "CATGGCGTCTTGCCGT-066_A01",
+      "cell_barcode": "CATGGCGTCTTGCCGT",
+      "library_label": "L8TX_181116_01_H10",
+      "anatomical_division_label": "MB"
+    }
+  ],
+  "WMB-10Xv3-P": [
+    {
+      "row_idx": 95878,
+      "cell_label": "TTCCTAAGTCTACAAC-436_C04",
+      "cell_barcode": "TTCCTAAGTCTACAAC",
+      "library_label": "L8TX_201119_01_E08",
+      "anatomical_division_label": "P"
+    },
+    {
+      "row_idx": 194158,
+      "cell_label": "GATCGTACACAGTGTT-155_A01",
+      "cell_barcode": "GATCGTACACAGTGTT",
+      "library_label": "L8TX_190903_01_E02",
+      "anatomical_division_label": "P"
+    },
+    {
+      "row_idx": 194513,
+      "cell_label": "TCTGGCTGTGCTATTG-166_A01",
+      "cell_barcode": "TCTGGCTGTGCTATTG",
+      "library_label": "L8TX_191015_01_D06",
+      "anatomical_division_label": "P"
+    },
+    {
+      "row_idx": 217912,
+      "cell_label": "CTTGAGACACTTGGGC-163_A01",
+      "cell_barcode": "CTTGAGACACTTGGGC",
+      "library_label": "L8TX_191003_01_D04",
+      "anatomical_division_label": "P"
+    },
+    {
+      "row_idx": 217925,
+      "cell_label": "TACCCGTCAAGCAATA-538_B01",
+      "cell_barcode": "TACCCGTCAAGCAATA",
+      "library_label": "L8TX_210226_01_C12",
+      "anatomical_division_label": "P"
+    },
+    {
+      "row_idx": 217941,
+      "cell_label": "AGGTCTATCTAGATCG-155_A01",
+      "cell_barcode": "AGGTCTATCTAGATCG",
+      "library_label": "L8TX_190903_01_E02",
+      "anatomical_division_label": "P"
+    },
+    {
+      "row_idx": 218954,
+      "cell_label": "GTAGTACGTTAGAAGT-196.3_A01",
+      "cell_barcode": "GTAGTACGTTAGAAGT",
+      "library_label": "L8TX_200106_01_C08",
+      "anatomical_division_label": "P"
+    },
+    {
+      "row_idx": 218958,
+      "cell_label": "CATCCGTCATTACTCT-166_A01",
+      "cell_barcode": "CATCCGTCATTACTCT",
+      "library_label": "L8TX_191015_01_D06",
+      "anatomical_division_label": "P"
+    },
+    {
+      "row_idx": 218960,
+      "cell_label": "TTCACCGAGTACAGCG-433_B01",
+      "cell_barcode": "TTCACCGAGTACAGCG",
+      "library_label": "L8TX_201119_01_D08",
+      "anatomical_division_label": "P"
+    },
+    {
+      "row_idx": 218966,
+      "cell_label": "AAGGAATGTCTTCTAT-1025_B04",
+      "cell_barcode": "AAGGAATGTCTTCTAT",
+      "library_label": "L8TX_220120_01_C02",
+      "anatomical_division_label": "P"
+    }
+  ],
+  "WMB-10Xv3-MB": [
+    {
+      "row_idx": 104511,
+      "cell_label": "TCATTCATCGAATGCT-211_B01",
+      "cell_barcode": "TCATTCATCGAATGCT",
+      "library_label": "L8TX_200130_01_D01",
+      "anatomical_division_label": "MB"
+    },
+    {
+      "row_idx": 140308,
+      "cell_label": "CTCAGAAGTAGCCAGA-420_D06",
+      "cell_barcode": "CTCAGAAGTAGCCAGA",
+      "library_label": "L8TX_201106_01_H03",
+      "anatomical_division_label": "MB"
+    },
+    {
+      "row_idx": 142857,
+      "cell_label": "CCTCACATCAGGCGAA-425_D03",
+      "cell_barcode": "CCTCACATCAGGCGAA",
+      "library_label": "L8TX_201113_01_G07",
+      "anatomical_division_label": "MB"
+    },
+    {
+      "row_idx": 142863,
+      "cell_label": "CTCCTCCCACGTCGTG-425_C03",
+      "cell_barcode": "CTCCTCCCACGTCGTG",
+      "library_label": "L8TX_201112_01_F05",
+      "anatomical_division_label": "MB"
+    },
+    {
+      "row_idx": 155519,
+      "cell_label": "TCACGGGAGCCGTAAG-420_D06",
+      "cell_barcode": "TCACGGGAGCCGTAAG",
+      "library_label": "L8TX_201106_01_H03",
+      "anatomical_division_label": "MB"
+    },
+    {
+      "row_idx": 194498,
+      "cell_label": "GAATCACAGGAGCAAA-982_A03",
+      "cell_barcode": "GAATCACAGGAGCAAA",
+      "library_label": "L8TX_211216_01_D01",
+      "anatomical_division_label": "MB"
+    },
+    {
+      "row_idx": 210507,
+      "cell_label": "ATAGAGACAACACTAC-140_B01",
+      "cell_barcode": "ATAGAGACAACACTAC",
+      "library_label": "L8TX_190725_01_B09",
+      "anatomical_division_label": "MB"
+    },
+    {
+      "row_idx": 217242,
+      "cell_label": "GCTGGGTTCGCTATTT-424_D02",
+      "cell_barcode": "GCTGGGTTCGCTATTT",
+      "library_label": "L8TX_201112_01_H05",
+      "anatomical_division_label": "MB"
+    },
+    {
+      "row_idx": 217248,
+      "cell_label": "CCACGAGTCGTTAGTG-128_A01",
+      "cell_barcode": "CCACGAGTCGTTAGTG",
+      "library_label": "L8TX_190614_01_A05",
+      "anatomical_division_label": "MB"
+    },
+    {
+      "row_idx": 217254,
+      "cell_label": "CTTCTAAAGTCATCGT-128_A01",
+      "cell_barcode": "CTTCTAAAGTCATCGT",
+      "library_label": "L8TX_190614_01_A05",
+      "anatomical_division_label": "MB"
+    }
+  ],
+  "WMB-10Xv3-MY": [
+    {
+      "row_idx": 217940,
+      "cell_label": "AGAGAATAGCAGCACA-174_A01",
+      "cell_barcode": "AGAGAATAGCAGCACA",
+      "library_label": "L8TX_191105_01_E09",
+      "anatomical_division_label": "MY"
+    },
+    {
+      "row_idx": 217943,
+      "cell_label": "GCACGGTAGCCTGAAG-072_D01",
+      "cell_barcode": "GCACGGTAGCCTGAAG",
+      "library_label": "L8TX_181211_01_D03",
+      "anatomical_division_label": "MY"
+    },
+    {
+      "row_idx": 218987,
+      "cell_label": "CTGGTCTAGTTGCATC-072_D01",
+      "cell_barcode": "CTGGTCTAGTTGCATC",
+      "library_label": "L8TX_181211_01_D03",
+      "anatomical_division_label": "MY"
+    },
+    {
+      "row_idx": 219114,
+      "cell_label": "GAAGCGAAGTAGGATT-072_B01",
+      "cell_barcode": "GAAGCGAAGTAGGATT",
+      "library_label": "L8TX_181211_01_G01",
+      "anatomical_division_label": "MY"
+    },
+    {
+      "row_idx": 219116,
+      "cell_label": "GACTTCCCACGCGGTT-232_A01",
+      "cell_barcode": "GACTTCCCACGCGGTT",
+      "library_label": "L8TX_200306_01_A01",
+      "anatomical_division_label": "MY"
+    },
+    {
+      "row_idx": 219258,
+      "cell_label": "CTCTCGACAATCTCTT-489_A05",
+      "cell_barcode": "CTCTCGACAATCTCTT",
+      "library_label": "L8TX_210114_01_B02",
+      "anatomical_division_label": "MY"
+    },
+    {
+      "row_idx": 238004,
+      "cell_label": "TGGTTAGAGCTAAATG-233_A01",
+      "cell_barcode": "TGGTTAGAGCTAAATG",
+      "library_label": "L8TX_200310_01_B01",
+      "anatomical_division_label": "MY"
+    },
+    {
+      "row_idx": 246624,
+      "cell_label": "TCCTTTCAGTAGGAAG-232_A01",
+      "cell_barcode": "TCCTTTCAGTAGGAAG",
+      "library_label": "L8TX_200306_01_A01",
+      "anatomical_division_label": "MY"
+    },
+    {
+      "row_idx": 334798,
+      "cell_label": "AGCCAATTCAGCGCGT-179_B01",
+      "cell_barcode": "AGCCAATTCAGCGCGT",
+      "library_label": "L8TX_191119_01_C11",
+      "anatomical_division_label": "MY"
+    },
+    {
+      "row_idx": 360794,
+      "cell_label": "CATCCGTCAGATCCAT-174_A01",
+      "cell_barcode": "CATCCGTCAGATCCAT",
+      "library_label": "L8TX_191105_01_E09",
+      "anatomical_division_label": "MY"
+    }
+  ],
+  "": [
+    {
+      "row_idx": 268171,
+      "cell_label": "CATACCCAGAGCATCG-124_B01",
+      "cell_barcode": "CATACCCAGAGCATCG",
+      "library_label": "L8TX_190531_01_A02",
+      "anatomical_division_label": "STR"
+    },
+    {
+      "row_idx": 268172,
+      "cell_label": "CTGTAGACAAGGATGC-335_A04",
+      "cell_barcode": "CTGTAGACAAGGATGC",
+      "library_label": "L8TX_200820_01_F02",
+      "anatomical_division_label": "STR"
+    },
+    {
+      "row_idx": 268173,
+      "cell_label": "AACACACGTAGCGATG-118_B01",
+      "cell_barcode": "AACACACGTAGCGATG",
+      "library_label": "L8TX_190509_01_D09",
+      "anatomical_division_label": "STR"
+    },
+    {
+      "row_idx": 268174,
+      "cell_label": "AACAGGGCAGATCCAT-126_A01",
+      "cell_barcode": "AACAGGGCAGATCCAT",
+      "library_label": "L8TX_190614_01_A06",
+      "anatomical_division_label": "PAL"
+    },
+    {
+      "row_idx": 268175,
+      "cell_label": "AGCATCATCTGAACGT-122_A01",
+      "cell_barcode": "AGCATCATCTGAACGT",
+      "library_label": "L8TX_190531_01_A01",
+      "anatomical_division_label": "STR"
+    },
+    {
+      "row_idx": 268176,
+      "cell_label": "AGCGTATTCTCGTGAA-122_A01",
+      "cell_barcode": "AGCGTATTCTCGTGAA",
+      "library_label": "L8TX_190531_01_A01",
+      "anatomical_division_label": "STR"
+    },
+    {
+      "row_idx": 268177,
+      "cell_label": "CATCCACTCTTGTGCC-122_A01",
+      "cell_barcode": "CATCCACTCTTGTGCC",
+      "library_label": "L8TX_190531_01_A01",
+      "anatomical_division_label": "STR"
+    },
+    {
+      "row_idx": 268178,
+      "cell_label": "CCTCACAAGGGCAAGG-118_A01",
+      "cell_barcode": "CCTCACAAGGGCAAGG",
+      "library_label": "L8TX_190509_01_C09",
+      "anatomical_division_label": "STR"
+    },
+    {
+      "row_idx": 268179,
+      "cell_label": "GATCGTAAGTGTTCAC-124_A01",
+      "cell_barcode": "GATCGTAAGTGTTCAC",
+      "library_label": "L8TX_190531_01_H01",
+      "anatomical_division_label": "STR"
+    },
+    {
+      "row_idx": 268180,
+      "cell_label": "GGTGTCGGTTCTTAGG-335_A04",
+      "cell_barcode": "GGTGTCGGTTCTTAGG",
+      "library_label": "L8TX_200820_01_F02",
+      "anatomical_division_label": "STR"
+    }
+  ],
+  "WMB-10Xv3-CB": [
+    {
+      "row_idx": 364756,
+      "cell_label": "GTTGCGGCACTCCTTG-191_A01",
+      "cell_barcode": "GTTGCGGCACTCCTTG",
+      "library_label": "L8TX_191217_01_G06",
+      "anatomical_division_label": "CB"
+    },
+    {
+      "row_idx": 364762,
+      "cell_label": "TCATTTGCAGAAGCTG-191_A01",
+      "cell_barcode": "TCATTTGCAGAAGCTG",
+      "library_label": "L8TX_191217_01_G06",
+      "anatomical_division_label": "CB"
+    },
+    {
+      "row_idx": 364790,
+      "cell_label": "TTGTGGAAGTTACGGG-193_B01",
+      "cell_barcode": "TTGTGGAAGTTACGGG",
+      "library_label": "L8TX_191217_01_E07",
+      "anatomical_division_label": "CB"
+    },
+    {
+      "row_idx": 364791,
+      "cell_label": "CATCCCACATGACCCG-221.2_B01",
+      "cell_barcode": "CATCCCACATGACCCG",
+      "library_label": "L8TX_200220_01_H08",
+      "anatomical_division_label": "CB"
+    },
+    {
+      "row_idx": 364792,
+      "cell_label": "GCCTGTTCATCTCATT-191_B01",
+      "cell_barcode": "GCCTGTTCATCTCATT",
+      "library_label": "L8TX_191217_01_H06",
+      "anatomical_division_label": "CB"
+    },
+    {
+      "row_idx": 364793,
+      "cell_label": "TACTTGTGTTACGGAG-213.2_B01",
+      "cell_barcode": "TACTTGTGTTACGGAG",
+      "library_label": "L8TX_200206_01_A03",
+      "anatomical_division_label": "CB"
+    },
+    {
+      "row_idx": 364794,
+      "cell_label": "CTCCACATCGTAACTG-191_B01",
+      "cell_barcode": "CTCCACATCGTAACTG",
+      "library_label": "L8TX_191217_01_H06",
+      "anatomical_division_label": "CB"
+    },
+    {
+      "row_idx": 364796,
+      "cell_label": "TCTATACTCTTGGGCG-221.2_A01",
+      "cell_barcode": "TCTATACTCTTGGGCG",
+      "library_label": "L8TX_200220_01_G08",
+      "anatomical_division_label": "CB"
+    },
+    {
+      "row_idx": 364797,
+      "cell_label": "AGTAGCTGTGGTAATA-221.2_A01",
+      "cell_barcode": "AGTAGCTGTGGTAATA",
+      "library_label": "L8TX_200220_01_G08",
+      "anatomical_division_label": "CB"
+    },
+    {
+      "row_idx": 364798,
+      "cell_label": "CTCCTCCGTAAGTTAG-213.2_A01",
+      "cell_barcode": "CTCCTCCGTAAGTTAG",
+      "library_label": "L8TX_200206_01_H02",
+      "anatomical_division_label": "CB"
+    }
+  ]
+}

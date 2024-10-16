@@ -21,7 +21,7 @@ def main():
         type=str,
         default=None,
         nargs='+',
-        help='columns to keep in obs')
+        help='columns to keep in var')
     args = parser.parse_args()
 
     config = []
